@@ -1,0 +1,5 @@
+Model,MSE,RMSE
+Linear Regression,0.12,0.34
+LASSO Regression,0.10,0.31
+Ridge Regression,0.09,0.30
+Decision Tree,0.15,0.39
