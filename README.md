@@ -1,54 +1,40 @@
-Agricultural Yield Regression Analysis
+# Agricultural Yield Regression Analysis
 
-Project Overview
+[![Python](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Build](https://img.shields.io/github/workflow/status/Lami14/agricultural-yield-regression-analysis/Python%20application)](https://github.com/Lami14/agricultural-yield-regression-analysis/actions)
 
-This project applies regression analysis and machine learning techniques to predict agricultural yield using geographic, soil, and farm management data.
+## Overview
 
-The goal is to understand how different environmental and management variables influence crop yield and to build predictive models for agricultural productivity.
+This project predicts **standardized agricultural yield** using regression and machine learning techniques.  
+It helps farmers understand the impact of soil, geography, and farm management on crop yield.  
 
-Dataset Features
-
-The dataset includes:
-
-Geographic Features
-
-- Elevation
-- Latitude
-- Longitude
-- Location
-- Slope
-
-Weather Features
-
-- Rainfall
-- Minimum Temperature
-- Maximum Temperature
-- Average Temperature
-
-Soil and Crop Features
-
-- Soil Fertility
-- Soil Type
-- pH Level
-
-Farm Management Features
-
-- Pollution Level
-- Plot Size
-- Crop Type
-
-Target Variable
-
-- Standard_yield – standardised yield independent of field size and crop type.
-
-Methods Used
-
-- Data Cleaning
-- Feature Engineering
-- Dummy Variable Encoding
+**Key features:**
 - Multiple Linear Regression
-- LASSO Regularisation
-- Ridge Regression
+- LASSO & Ridge Regression for feature selection & multicollinearity
+- Decision Tree Regression
+- Feature engineering and scaling
+- Model evaluation with RMSE, MSE, and visual diagnostics
+
+---
+
+## Dataset
+
+The dataset contains:
+
+| Feature Group | Examples |
+|---------------|---------|
+| Geographic    | Elevation, Latitude, Longitude, Slope, Location |
+| Soil & Crop   | Soil_type, Soil_fertility, pH, Chosen_crop |
+| Weather       | Rainfall, Ave_temps, Min/Max Temperature (dummy) |
+| Farm Management | Pollution_level, Plot_size, Annual_yield (not used) |
+| Target        | Standard_yield |
+
+> **Target variable:** Standard_yield (normalized per crop)
+
+---
+
+## Folder Structure- Ridge Regression
 - Decision Tree Modelling
 
 Model Evaluation
