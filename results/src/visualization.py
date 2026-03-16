@@ -1,14 +1,18 @@
-import seaborn as sns
 import matplotlib.pyplot as plt
 
-def correlation_heatmap(df):
+def residual_plot(y_true, y_pred):
 
-    corr = df.corr()
+    residuals = y_true - y_pred
 
-    plt.figure(figsize=(10,8))
-    sns.heatmap(corr, cmap="coolwarm")
+    plt.scatter(y_pred, residuals)
 
-    plt.title("Correlation Matrix")
-    plt.savefig("../results/correlation_heatmap.png")
+    plt.axhline(0, linestyle="--")
+
+    plt.xlabel("Fitted Values")
+    plt.ylabel("Residuals")
+
+    plt.title("Residuals vs Fitted")
+
+    plt.savefig("../results/residual_plot.png")
 
     plt.close()
